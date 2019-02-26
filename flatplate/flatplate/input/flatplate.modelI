@@ -1,0 +1,26 @@
+CONTROL
+"modelI"
+1
+"nodeset"
+"elemset"
+*
+INCLUDE "/usr/src/model/flatplate/include/flatplate.implicit.dynamics"
+*
+OUTPUT
+energies "/usr/src/model/flatplate/results/modelI/energies.viscomoon.out" 1
+gdisplac "/usr/src/model/flatplate/results/modelI/gdisplac.viscomoon.out" 1
+gvelocit "/usr/src/model/flatplate/results/modelI/gvelocit.viscomoon.out" 1
+gacceler "/usr/src/model/flatplate/results/modelI/gacceler.viscomoon.out" 1
+*statevct "/usr/src/model/flatplate/snapshots/statevct.viscomoon.out" 1
+*velocvct "/usr/src/model/flatplate/snapshots/velocvct.viscomoon.out" 1 
+gdisplac "/usr/src/model/flatplate/results/modelI/gdisplac.viscomoon.node121" 1 121
+gvelocit "/usr/src/model/flatplate/results/modelI/gvelocit.viscomoon.node121" 1 121
+gacceler "/usr/src/model/flatplate/results/modelI/gacceler.viscomoon.node121" 1 121
+*
+INCLUDE "/usr/src/model/flatplate/include/flatplate.force"
+INCLUDE "/usr/src/model/flatplate/include/flatplate.geom"
+INCLUDE "/usr/src/model/flatplate/include/flatplate.attr"
+INCLUDE "/usr/src/model/flatplate/include/flatplate.mat"
+INCLUDE "/usr/src/model/flatplate/include/flatplate.IC"
+*
+END

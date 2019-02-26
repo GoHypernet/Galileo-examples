@@ -1,0 +1,9 @@
+DYNAMIC
+*check
+*             rho_inf 
+mech          1
+*                   time step  total time
+time          0.0      3e-6    3e-3
+NONLINEAR
+nltol 1e-6
+maxit 10

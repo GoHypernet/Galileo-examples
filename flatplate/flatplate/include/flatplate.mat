@@ -1,0 +1,20 @@
+*
+MATERIAL
+* Aluminum
+1 0.000000 7.0e10 0.300000 2.70e03 0.000000 0.000000 8.000000e-004 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0. 0. 0. 0.
+* Gold
+*2 0.000000 7.9e10 0.400000 19.3e03 0.000000 0.000000 1.420000e-006 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0. 0. 0. 0.
+*
+*MATLAW 
+* Polyurethane nanocomposite
+* id Ogden rho mu1 mu2 mu3 alpha1 alpha2 alpha3 c d (d=0 c = bulk modulus/2)
+*1 Ogden 1200 10.02 0.11 2.62 3.97 -0.14 -6.13 7.2e6 0
+* id ViscoMooney density c1 c2 c ginf g1 tau1 g2 tau2 g3 tau3 
+*2 ViscoMoon 1200 11.83e6 -5.72e6 0 0.754 0.08 0.24 0.081 0.37 0.085 3.06
+* id linear rho YoungMod Poisson
+*3 IsotropicViscoLinearElastic 2.7e3 7.0e10 0.3 0.754 0.08 0.24 0.081 0.37 0.085 3.06
+*4 IsotropicLinearElastic 2.7e3 7.0e10 0.3
+*
+*MATUSAGE 
+*1 400 4
+*
