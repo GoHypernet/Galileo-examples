@@ -20,6 +20,7 @@ d1$MillLikert <- factor(d1$MillLikert, levels = c(1,2,3),labels = c("Gen Z", "Mi
 #DOOR1 + DOOR2 + Age + MillLikert + MillDummy + Male + Educ + Income + Race + InvCrypto + SafeInv + InvFut + InvAss + LikICO
 
 model <- glm(DOOR2 ~ Age + Male + Educ, family=binomial(link='logit'), data=d1)
-summary(model)
+results <- summary.glm(model)$coefficients
 
+save(results, file="./logmodel.Rdata")
 #```
