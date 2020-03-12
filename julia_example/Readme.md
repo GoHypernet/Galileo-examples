@@ -6,7 +6,7 @@ The smallest dataset represents passenger data from the Titantic
 and tries to determine what attributes best predict a passengers 
 survival. It runs in a few minutes. 
 
-The largest dataset comes from a Kagel Competition and represents 
+The largest dataset comes from a Kaggle Competition and represents 
 unkown relationships between unkown parameters. It runs for several
 hours. 
 
