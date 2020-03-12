@@ -1,0 +1,35 @@
+Proj Title=Muncie 2D Flow Area
+Current Plan=p04
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Geom File=g02
+Geom File=g04
+Flow File=f01
+Unsteady File=u01
+Plan File=p01
+Plan File=p03
+Plan File=p04
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+ The United States Army Corps of Engineers has granted access to the information in this model for instructional purposes only.  Do not copy, forward, or release the information without United States Army Corps of Engineers approval.  The results of this model do not deppict the data and final results from an official Corps of engineers study of this area.  These models have been develped for demonstration purposes only.
+
+This model is not a detailed model of this area.  The examples in this data set are put together to show the various ways you can link 1D and 2D elements.  The 2D areas are not detailed models (i.e. not a lot of time was spent laying out breaklines and testing cell size, time step, etc...
+END DESCRIPTION:
+DSS Start Date=01JAN1900
+DSS Start Time=0100
+DSS End Date=04JAN1900
+DSS End Time=2400
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Profiles= 0 
