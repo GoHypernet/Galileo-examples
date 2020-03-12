@@ -1,4 +1,3 @@
-From python:3.6.3
-RUN pip install numpy
+FROM tensorflow/tensorflow:latest-py3
 COPY . .
-ENTRYPOINT ["python","simple.py"]
+ENTRYPOINT ["python","main.py"]
