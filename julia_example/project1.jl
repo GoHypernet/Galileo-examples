@@ -3,6 +3,7 @@ using DataFrames
 import Printf
 import Random
 import Core
+import CSV
 import SpecialFunctions.logabsgamma
 
 """
@@ -153,11 +154,11 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
     if num_par == 0
         push!(subData, data)
     else
-        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
         # pre-sort data
         for p1 = num_par-1:-1:1
             df = subData[p1+1]
-            subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+            subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
         end
     end 
     for j = 1:q
@@ -167,7 +168,7 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
         # loop over the variables possible states
         for k = 1:r_vec[vert]
             sd = subData[1]
-            (mijk,dummy) = size(sd[sd[vert] .== k, :])
+            (mijk,dummy) = size(sd[sd[!,vert] .== k, :])
             aijk = 1
             mij0 += mijk
             aij0 += aijk
@@ -188,21 +189,21 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
                 if num_par > 1
                     # first resort next level
                     if i == num_par
-                        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                     elseif i == num_par - 1
-                        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                         df = subData[num_par]
-                        subData[i] = df[df[parents[i]] .== pstate[i], :]
+                        subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                     else
                         df = subData[i+2]
-                        subData[i+1] = df[df[parents[i+1]] .== pstate[i+1], :]
+                        subData[i+1] = df[df[!,parents[i+1]] .== pstate[i+1], :]
                         df = subData[i+1]
-                        subData[i] = df[df[parents[i]] .== pstate[i], :]
+                        subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                     end
                     #then filter down
                     for p1 = i-1:-1:2
                         df = subData[p1+1]
-                        subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+                        subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
                     end
                 end
             end
@@ -213,7 +214,7 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
                supData = data
             end
             (x,c) = size(supData)
-            subData[1] = supData[ supData[parents[1]] .== pstate[1], :]
+            subData[1] = supData[supData[!,parents[1]] .== pstate[1], :]
         end
     end
 
@@ -239,11 +240,11 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
     if num_par == 0
         push!(subData, data)
     else
-        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
         # pre-sort data
         for p1 = num_par-1:-1:1
             df = subData[p1+1]
-            subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+            subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
         end
     end 
     for j = 1:q
@@ -253,7 +254,7 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
         # loop over the variables possible states
         for k = 1:r_vec[vert]
             sd = subData[1]
-            (mijk,dummy) = size(sd[sd[vert] .== k, :])
+            (mijk,dummy) = size(sd[sd[!,vert] .== k, :])
             aijk = 1
             mij0 += mijk
             aij0 += aijk
@@ -274,21 +275,21 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
                 if num_par > 1
                     # first resort next level
                     if i == num_par
-                        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                     elseif i == num_par - 1
-                        subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                        subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                         df = subData[num_par]
-                        subData[i] = df[df[parents[i]] .== pstate[i], :]
+                        subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                     else
                         df = subData[i+2]
-                        subData[i+1] = df[df[parents[i+1]] .== pstate[i+1], :]
+                        subData[i+1] = df[df[!,parents[i+1]] .== pstate[i+1], :]
                         df = subData[i+1]
-                        subData[i] = df[df[parents[i]] .== pstate[i], :]
+                        subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                     end
                     #then filter down
                     for p1 = i-1:-1:2
                         df = subData[p1+1]
-                        subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+                        subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
                     end
                 end
             end
@@ -299,7 +300,7 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
                supData = data
             end
             (x,c) = size(supData)
-            subData[1] = supData[ supData[parents[1]] .== pstate[1], :]
+            subData[1] = supData[supData[!,parents[1]] .== pstate[1], :]
         end
     end
 
@@ -331,11 +332,11 @@ function bayes_score(dag::DiGraph, nms, data)
         if num_par == 0
             push!(subData, data)
         else
-            subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+            subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
             # pre-sort data
             for p1 = num_par-1:-1:1
                 df = subData[p1+1]
-                subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+                subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
             end
         end
         # loop over each of the parent states
@@ -346,7 +347,7 @@ function bayes_score(dag::DiGraph, nms, data)
             # loop over the variables possible states
             for k = 1:r_vec[vert]
                 sd = subData[1]
-                (mijk,dummy) = size(sd[sd[vert] .== k, :])
+                (mijk,dummy) = size(sd[sd[!,vert] .== k, :])
                 aijk = 1
                 mij0 += mijk
                 aij0 += aijk
@@ -367,21 +368,21 @@ function bayes_score(dag::DiGraph, nms, data)
                     if num_par > 1 
                         # first resort next level    
                         if i == num_par
-                            subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                            subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                         elseif i == num_par - 1
-                            subData[num_par] = data[data[parents[num_par]] .== pstate[num_par], :]
+                            subData[num_par] = data[data[!,parents[num_par]] .== pstate[num_par], :]
                             df = subData[num_par]
-                            subData[i] = df[df[parents[i]] .== pstate[i], :]
+                            subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                         else
                             df = subData[i+2]
-                            subData[i+1] = df[df[parents[i+1]] .== pstate[i+1], :]
+                            subData[i+1] = df[df[!,parents[i+1]] .== pstate[i+1], :]
                             df = subData[i+1]
-                            subData[i] = df[df[parents[i]] .== pstate[i], :]
+                            subData[i] = df[df[!,parents[i]] .== pstate[i], :]
                         end
                         #then filter down
                         for p1 = i-1:-1:2
                             df = subData[p1+1]
-                            subData[p1] = df[df[parents[p1]] .== pstate[p1], :]
+                            subData[p1] = df[df[!,parents[p1]] .== pstate[p1], :]
                         end 
                     end
                 end
@@ -392,7 +393,7 @@ function bayes_score(dag::DiGraph, nms, data)
                    supData = data
                 end
                 (x,c) = size(supData)
-                subData[1] = supData[ supData[parents[1]] .== pstate[1], :]
+                subData[1] = supData[supData[!,parents[1]] .== pstate[1], :]
             end
         end
     end
@@ -403,7 +404,7 @@ function compute(infile, outfile)
    
     println("Reading data from file: $(infile)") 
     # First, read the comma delimited data file
-    data = readtable(infile);
+    data = CSV.read(infile);
 
     # Then get number of variables and observations
     (n_obs,n_vert) = size(data)

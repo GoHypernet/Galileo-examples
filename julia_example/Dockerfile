@@ -1,6 +1,7 @@
 From julia
 RUN julia -e 'import Pkg; Pkg.add("LightGraphs")' && \
     julia -e 'import Pkg; Pkg.add("DataFrames")' && \
+    julia -e 'import Pkg; Pkg.add("CSV")' && \
     julia -e 'import Pkg; Pkg.add("SpecialFunctions")' && \
     julia -e 'using LightGraphs' && \
     julia -e 'using DataFrames'
