@@ -3,7 +3,7 @@ using DataFrames
 import Printf
 import Random
 import Core
-import SpecialFunctions.lgamma
+import SpecialFunctions.logabsgamma
 
 """
     write_gph(dag::DiGraph, idx2names, filename)
@@ -171,9 +171,9 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
             aijk = 1
             mij0 += mijk
             aij0 += aijk
-            inner_score += (lgamma(aijk + mijk) - lgamma(aijk))
+            inner_score += (logabsgamma(aijk + mijk)[1] - logabsgamma(aijk)[1])
         end
-        inner_score += (lgamma(aij0) - lgamma(aij0 + mij0))
+        inner_score += (logabsgamma(aij0)[1] - logabsgamma(aij0 + mij0)[1])
         bscore -= inner_score
         # increment the state vector
         for i = 1:num_par
@@ -257,9 +257,9 @@ function bayes_score(dag::DiGraph, nms, data, vert, newPar, bscore)
             aijk = 1
             mij0 += mijk
             aij0 += aijk
-            inner_score += (lgamma(aijk + mijk) - lgamma(aijk))
+            inner_score += (logabsgamma(aijk + mijk)[1] - logabsgamma(aijk)[1])
         end
-        inner_score += (lgamma(aij0) - lgamma(aij0 + mij0))
+        inner_score += (logabsgamma(aij0)[1] - logabsgamma(aij0 + mij0)[1])
         bscore += inner_score
         # increment the state vector
         for i = 1:num_par
@@ -350,9 +350,9 @@ function bayes_score(dag::DiGraph, nms, data)
                 aijk = 1
                 mij0 += mijk
                 aij0 += aijk
-                inner_score += (lgamma(aijk + mijk) - lgamma(aijk))
+                inner_score += (logabsgamma(aijk + mijk)[1] - logabsgamma(aijk)[1])
             end
-            inner_score += (lgamma(aij0) - lgamma(aij0 + mij0))
+            inner_score += (logabsgamma(aij0)[1] - logabsgamma(aij0 + mij0)[1])
             bscore += inner_score
             # increment the state vector
             for i = 1:num_par
