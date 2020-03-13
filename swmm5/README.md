@@ -1,5 +1,5 @@
 # SWMM5 computational engine example
-This particular example and many other like it can be found at 
+This particular example and many others like it can be found at 
 https://www.openswmm.org/SWMMExamples
 
 This example demonstrates how to run swmm5 flood simulator via Galileo. 
