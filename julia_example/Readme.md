@@ -1,6 +1,6 @@
 # Bayesian Network training via Julia 
 This example uses the Julia Language to train a Bayesian network.
-There are 3 candidate dataset to choose from.
+There are 3 candidate datasets to choose from.
 
 The smallest dataset contains passenger data from the Titantic 
 disaster and tries to determine what attributes best predict if 
