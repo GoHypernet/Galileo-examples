@@ -6,4 +6,4 @@ RUN julia -e 'import Pkg; Pkg.add("LightGraphs")' && \
     julia -e 'using LightGraphs' && \
     julia -e 'using DataFrames'
 COPY . .
-ENTRYPOINT ["julia","project1.jl","small.csv","bayesnetwork.gph"]
+ENTRYPOINT ["julia","project1.jl","medium.csv","bayesnetwork.gph"]
