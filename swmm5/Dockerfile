@@ -1,3 +1,3 @@
-FROM hypernetlabs/simulator:swmm
+FROM hypernetlabs/simulator:swmm5.1.14
 COPY . /data
-ENTRYPOINT ["run-swmm","/data/Example9.inp","/data/Example9.rpt","/data/Example9.out"]
+ENTRYPOINT ["runswmm","/data/Example9.inp","/data/Example9.rpt","/data/Example9.out"]
