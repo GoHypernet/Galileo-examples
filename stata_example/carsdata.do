@@ -19,7 +19,7 @@ summarize
 twoway (scatter cars hhsize) (lfit cars hhsize)
 
 * Save the preceding graph in a file in PNG (portable networks graphic) format
-graph export carsdata.png, replace
+graph export carsdata.pdf, replace
 
 * Regress cars on hhsize
 regress cars hhsize
