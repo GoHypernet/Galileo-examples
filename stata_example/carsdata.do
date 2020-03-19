@@ -23,4 +23,3 @@ graph export carsdata.pdf, replace
 
 * Regress cars on hhsize
 regress cars hhsize
-
