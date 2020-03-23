@@ -1,3 +1,6 @@
 FROM hypernetlabs/simulator:swmm5.1.14
-COPY . /data
-ENTRYPOINT ["runswmm","/data/Example9.inp","/data/Example9.rpt","/data/Example9.out"]
+COPY . .
+# put the name of your input file here without the .inp extension
+ENV SWMMFILE=Example9
+# Do you want all your input files returned? 0 = no, 1 = yes
+ENV RETURNINPUT=1
