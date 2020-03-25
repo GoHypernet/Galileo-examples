@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="fgdc_classic.xsl"?>
+<metadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://water.usgs.gov/GIS/metadata/usgswrd/fgdc-std-001-1998.xsd">
+<idinfo>
+<citation>
+<citeinfo>
+<origin>U.S. Geological Survey</origin>
+<pubdate>20050102</pubdate>
+<title>Enhanced Historical Land-Use and Land-Cover Data Sets of the U.S. Geological Survey: polygon format files</title>
+<edition>1.0</edition>
+<geoform>vector digital data</geoform>
+<serinfo>
+<sername>USGS Digital Data Series</sername>
+<issue>240</issue>
+</serinfo>
+<pubinfo>
+<pubplace>Reston, VA</pubplace>
+<publish>U.S. Geological Survey</publish>
+</pubinfo>
+<onlink>/lookup/getspatial?ds240_landuse_poly</onlink>
+<lworkcit>
+<citeinfo>
+<origin>Curtis V. Price</origin>
+<origin>Naomi Nakagaki</origin>
+<origin>Kerie J. Hitt</origin>
+<origin>Rick M. Clawges</origin>
+<pubdate>20050102</pubdate>
+<title>Enhanced Historical Land-Use and Land-Cover Data Sets of the U.S. Geological Survey</title>
+<edition>1.0</edition>
+<geoform>map</geoform>
+<serinfo>
+<sername>U.S. Geological Survey Data Series</sername>
+<issue>240</issue>
+</serinfo>
+<pubinfo>
+<pubplace>Reston, VA</pubplace>
+<publish>U.S. Geological Survey</publish>
+</pubinfo>
+<othercit>
+USGS form reference:
+
+Price, C.V., Nakagaki, N., Hitt, K.J., and Clawges, R.C., 2006, Enhanced Historical Land-Use and Land-Cover Data Sets of the U.S. Geological Survey, U.S. Geological Survey Digital Data Series 240. [digital data set]
+http://pubs.usgs.gov/ds/2006/240
+</othercit>
+<onlink>http://pubs.usgs.gov/ds/2006/240/</onlink>
+<onlink>http://pubs.water.usgs.gov/ds240</onlink>
+</citeinfo>
+</lworkcit>
+</citeinfo>
+</citation>
+<descript>
+<abstract>This data set depicts land use and land cover from the 1970s and 1980s and has been previously published by the U.S. Geological Survey (USGS) in other file formats. This version has been reformatted to other file formats and includes minor edits applied by the U.S.  Environmental Protection Agency (USEPA) and USGS scientists. This data set was developed to meet the needs of the USGS National Water-Quality Assessment (NAWQA) Program.</abstract>
+<purpose>
+Land-use and land-cover data collected by the U.S. Geological Survey are useful for environmental assessment of land-use patterns with respect to water-quality analysis, growth management, and other types of environmental impact assessment. 
+
+The data are meant to be normally used by quadrangle, or among adjacent quadrangles where temporally contiguous. The data can be used in any geographic application where intermediate scale land-use data are appropriate and the source land-cover map dates are representative of the time period of interest.
+</purpose>
+<supplinf>
+This data set is released as part of an enhanced version of previously published USGS land-use and land-cover data, edited to perform attribute and geographic corrections, recast to the North American Horizontal Datum of 1983, and reformatted to the commonly used geospatial data file formats. 
+
+BACKGROUND
+
+The following background information is extracted from:
+
+U.S. Geological Survey, 1986, Land use and land cover digital data from 1:250,000- and 1:100,000-scale maps: Data User Guide 4, 25 p. 
+
+(This document is out of print, but was available online on July 1, 2005 at http://www.vterrain.org/Culture/LULC/Data_Users_Guide_4.html)
+
+--- begin quote 
+
+&gt; &quot;The characteristics of the digital cartographic data base for land Use
+&gt; and land cover and associated maps reflect the parameters used in
+&gt; compiling the maps. The Land Use and Land Cover mapping program is
+&gt; designed so that standard topographic maps at a scale of l:250,000 can
+&gt; be used as a base for compilation and reproduction. In a few cases, the
+&gt; U.S. Geological Survey (USGS) has prepared Land Use and Land Cover and
+&gt; associated maps at a scale of 1:100,000 when the 1:100,000-scale
+&gt; topographic map base was available...
+
+&gt; Land Use and Land Cover maps provide data to be used either by
+&gt; themselves or in combination with the other data sets produced in the
+&gt; program. The basic sources of land use compilation data are NASA
+&gt; high-altitude aerial photographs, and National High-Altitude Photography
+&gt; (NHAP) program photographs, usually at scales smaller than l:60,000. The
+&gt; l:250,000-scale topographic map series is generally used as the base map
+&gt; for the compilation of the Land Use and Land Cover maps and the
+&gt; associated overlays; 1:100,000-scale topographic map bases have been
+&gt; used on rare occasions. Although compilation of Land Use and Land Cover
+&gt; data is performed on a film-positive base usually enlarged to a scale of
+&gt; approximately l:l25,000, the associated overlays are both compiled and
+&gt; digitized at a scale of l:250,000. 
+
+&gt; Land Use and Land Cover data compilation is based upon the
+&gt; classification system and definitions of Level II Land Use and Land
+&gt; Cover [codes, (see below)]...  All features are delineated by curved or
+&gt; straight lines that depict the actual boundaries of the areas (polygons)
+&gt; being described. The minimum size of polygons depicting all Urban or
+&gt; Built-up Land (categories 11-17), Water (51-54), Confined Feeding
+&gt; Operations (23), Other Agricultural Land (24), Strip Mines, Quarries,
+&gt; and Gravel Pits (75) and urban Transitional areas (76), is 4 hectares
+&gt; (ha). All other categories of Land Use and Land Cover have a minimum
+&gt; polygon size of 16 ha. (Those sizes also are considered the minimum
+&gt; sizes to which polygons are digitized.) In the Urban or Built-up Land
+&gt; and Water categories, the minimum width of a feature to be shown is 200 m;
+&gt; (that is, if a square with sides 200 m in length is delineated, the
+&gt; area will be 4 ha). Although the minimum-width consideration precludes
+&gt; the delineation of very narrow and very long 4-ha polygons, triangles or
+&gt; other polygons are acceptable if the base of the triangle or minimum
+&gt; width of the polygon is 200 m in length and if the area of the polygon
+&gt; is 4 ha. Exceptions to this specification are limited access highways
+&gt; (14) and all double line rivers (51) on the 1:250,000-scale base which
+&gt; shall have a minimum width of 92 m. For categories other than Urban or
+&gt; Built-up Land and Water, the 16-ha minimum size for delineation requires
+&gt; a minimum-width polygon of 400 m. Line weight for delineating Land Use
+&gt; and Land Cover polygons and for neatlines is 0.l0 mm at the production
+&gt; scale of l:250,000.&quot;
+
+--- end quote
+
+LAND-USE AND LAND-COVER CODES
+
+These data sets represent land use and land cover using an integer value that references the Anderson level II classification system. 
+
+The first digit represents the level 1 land-use and land-cover code, and the second digit (ones place) represents a subdivision, or level 2 code. 
+
+The Anderson Level II land use codes used in this data set are listed below:
+
+&gt;
+&gt; 1  Urban or built-up land
+&gt;
+&gt;  11 Residental
+&gt;  12 Commercial and services
+&gt;  13 Industrial
+&gt;  14 Transportation, communication, utilities
+&gt;  15 Industrial and commercial complexes
+&gt;  16 Mixed urban or built-up land
+&gt;  17 Other urban or built-up land
+&gt;
+&gt; 2  Agricultural land
+&gt;
+&gt;  21 Cropland and pasture
+&gt;  22 Orchards, groves, vineyards, nurseries, and ornamental horticultural
+&gt;  23 Confined feeding operations
+&gt;  24 Other agricultural land
+&gt;
+&gt; 3  Rangeland
+&gt;
+&gt;  31 Herbaceous rangeland
+&gt;  32 Shrub and brush rangeland
+&gt;  33 Mixed rangeland
+&gt;
+&gt; 4  Forest land
+&gt;
+&gt;  41 Deciduous forest land
+&gt;  42 Evergreen forest land
+&gt;  43 Mixed forest land
+&gt;
+&gt; 5  Water
+&gt;
+&gt;  51 Streams and canals
+&gt;  52 Lakes
+&gt;  53 Reservoirs
+&gt;  54 Bays and estuaries
+&gt;
+&gt; 6  Wetland
+&gt;
+&gt;  61 Forested wetland
+&gt;  62 Nonforested wetland
+&gt;
+&gt; 7  Barren land
+&gt;
+&gt;  71 Dry salt flats
+&gt;  72 Beaches
+&gt;  73 Sandy areas not beaches
+&gt;  74 Bare exposed rock
+&gt;  75 Strip mines, quarries, gravel pits
+&gt;  76 Transitional areas
+&gt;  77 Mixed Barren Land
+&gt;
+&gt; 8  Tundra
+&gt;
+&gt;  81 Shrub and brush tundra
+&gt;  82 Herbaceous tundra
+&gt;  83 Bare ground
+&gt;  84 Wet tundra
+&gt;  85 Mixed tundra
+&gt;
+&gt; 9  Perennial snow or ice
+&gt;
+&gt;  91 Perennial snowfields
+&gt;  92 Glaciers
+
+PROCESSING DETAILS
+
+The U.S. Environmental Protection Agency (USEPA) received the USGS land-use and and land-cover data files from USGS in 9-track ASCII format, one file per quadrangle.  Files were loaded onto the hard disk of the computer from tape. The data were then processed with the GIRASARC2 program written in Arc Macro Language (AML), which is part of the ArcInfo Geographic Information System (GIS) software. This program was developed by the USGS to process the data into a consistent ArcInfo format. 
+
+The GIRASARC2 AML &lt;http://www.epa.gov/ngispgm3/spdata/EPAGIRAS/meta/girasarc2.aml&gt; program does the following:
+
+&gt; -- Converts the USGS data files to polygon coverage format.
+&gt; -- Reconstructs topology, creating line and polygon features.
+&gt; -- Linearly scales the map coordinates to UTM  using the registration points 
+&gt;    listed in the USGS data file, and then modifies the coordinates to 
+&gt;    Albers Equal Area projection.
+&gt; -- Generates a quadrangle boundary polygon based on the mathematically-determined
+&gt;    corners of the map.
+&gt; -- Loads available documentation into a series of companion documentation
+&gt;    files with each data set.
+&gt; 
+
+Another AML program (GIRASNEAT,  &lt;http://www.epa.gov/ngispgm3/spdata/EPAGIRAS/meta/girasneat.aml&gt;) does the following:
+
+&gt; --clips the data to the neatline data set.
+&gt; --dissolves polygon boundaries between polygons with the same land use code.
+&gt; --snaps exterior arcs to the arcs of the neatline cover with a tolerance of
+&gt;   40 meters.
+
+Data were reviewed visually by the user responsible for executing the GIRASARC2 program. 
+
+The GIRASARC2 and GIRASNEAT programs were executed in AML to create each quadrangle data set. 
+
+The processing described above was completed by the USEPA in the early 1990s. In 2001, the USGS National Water-Quality Assessment (NAWQA) Program needed a seamless data base of the conterminous United States, so data sets were further enhanced for use in the Program, as described below. 
+
+Additional land use and land cover data sets for Hawaii and one map sheet in Alaska were converted using the same AML programs and edited in a similar manner.  The Hawaii data sets were joined together into a single data set as they all are documented with the same source date and are more easily handled as a single data file. 
+
+These data files were then further edited to correct land-use coding errors caused by the misplacement of labels have also been corrected by visual inspection, checking the codes against the original labels in the GIRAS data files and ancillary land-cover data sets.  An AML menu-based application was used to assist in this process. 
+
+In addition to the processing describe above, the data were processed to fill in all gaps between quadrangles so that the data fits together seamlessly.  The polygon data were then transformed so that the horizontal coordinate data reference the North American Datum of 1983.  (The raw GIRAS-format data and the USEPA version of it is referenced to the North American Datum of 1927.) The geographic data files were also projected into geographic coordinates (decimal degrees of latitude and longitude).   Additional polygon data sets that document the land-use and land-cover data sets in a geographic context were created from the USEPA quadrangle index coverages with further editing based on information in the USGS data files posted on the USGS FTP site at the USGS EROS Data Center at:  ftp://edcftp.cr.usgs.gov/pub/data/LULC  A summary of this effort was published as:  Price, C., Naomi, N., Hitt, K., and Clawges, R., 2003, Mining GIRAS: Improving on a national treasure of land use data, _in_ Proceedings of the 2004 ESRI International User Conference, July 7-11, 2003, Environmental Systems Research Institute, Redlands Calif., 11p., available online at http://gis.esri.com/library/userconf/proc03/p0904.pdf
+
+DATA FILE DESCRIPTIONS
+
+Note that all data sets are referenced to the North American Datum of 1983.
+
+1. tilepoly: Polygons representing each quadrangle tile.
+
+2. src_poly: Polygons representing the extent of source files, with metadata about the source files used for each area. Some land-use files were merged from multiple GIRAS source files, some of which have different source dates. 
+
+3. gAABBB: Polygons for each 1:250,000 tile, where &quot;AA&quot; represents the latitude of the lower right corner and &quot;BBB&quot; represents the longitude of the lower right corner of the map tile.  These tile names are referenced in the polygon attributes of the tilepoly and src_poly polygon data sets described above. 
+
+The polygon data sets above are distributed as a collection of related files that make up the publicly documented ESRI shapefile format:
+
+&gt; filename.shp ESRI shapefile geographic data file
+&gt; filename.shx ESRI shapefile index data file
+&gt; filename.dbf ESRI shapefile attribute file
+&gt; filename.prj &quot;Well-Known-Text&quot; (WTK) format projection file
+&gt; filename.shp..xml   metadata file 
+
+The shapefiles use geographic (decimal degree) coordinate data referenced to the North American Datum of 1983. 
+
+4. girasX Raster-format data, stored in six image files,
+in GeoTIFF format (with georeferencing included in the
+internal image header file). 
+
+&gt;  IMAGE      XMIN     YMIN     XMAX     YMAX  DESCRIPTION
+&gt;  giras1 -2380005  1874985       15  3200000  NW Conterminous US (Albers)
+&gt;  giras2       15  1874985  2300000  3172005  NE Conterminous US (Albers)
+&gt;  giras3 -2380005   199995       15  1874985  SW Conterminous US (Albers)
+&gt;  giras4       15   199995  2300000  1874985  SE Conterminous US (Albers)
+&gt;  giras5   369285  2081265  955575   2460585  Hawaii         (UTM Zone 4)
+&gt;  giras6   499875 6762705   662145   6877755  Valdez, Alaska (UTM Zone 6)
+
+The raster data sets are referenced to locations specified in projected coordinates (in meters). Image tiles giras1 through giras4 use standard parameters for the conterminous United States:
+
+&gt;  Projection    ALBERS
+&gt;  Datum         NAD83
+&gt;  Units         METERS
+&gt;  Spheroid      GRS1980
+&gt;  Xshift        0.0000000000
+&gt;  Yshift        0.0000000000
+&gt;  Parameters
+&gt;   29 30  0.000 /* 1st standard parallel
+&gt;   45 30  0.000 /* 2nd standard parallel
+&gt;  -96  0  0.000 /* central meridian
+&gt;   23  0  0.000 /* latitude of projection&apos;s origin
+&gt;  0.00000 /* false easting (meters)
+&gt;  0.00000 /* false northing (meters)
+
+giras5 (Hawaii) uses these projection parameters:
+
+&gt;  Projection    UTM
+&gt;  Zone          6
+&gt;  Datum         NAD83
+&gt;  Units         METERS
+&gt;  Spheroid      GRS1980
+
+giras6 (Valdez, Alaska) uses these projection parameters:
+
+&gt;  Projection    UTM
+&gt;  Zone          4
+&gt;  Datum         NAD83
+&gt;  Units         METERS
+&gt;  Spheroid      GRS1980
+
+The raster data sets are distributed as a collection of related files:
+ 
+&gt;  girasX.tif  Tagged-Image Format File (TIFF) with GeoTIFF georeferencing
+&gt;  girasX.tfw  ESRI &quot;World file&quot;, used for georeferencing
+&gt;  girasX.aux  ESRI &quot;aux file&quot; file used by ArcGIS software
+&gt;  girasX.prj  ESRI ArcInfo projection file 
+&gt;  girasX.tif.xml metadata file 
+
+DISCLAIMERS
+
+The use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government. 
+
+Although this Federal Geographic Data Committee-compliant metadata file is intended to document the data set in nonproprietary form, as well as in ArcInfo format, this metadata file may include some ArcInfo-specific terminology.  
+
+Although these data have been used by the U.S. Geological Survey, U.S.  Department of the Interior, no warranty expressed or implied is made by the U.S. Geological Survey as to the accuracy of the data.
+</supplinf>
+</descript>
+<timeperd>
+<timeinfo>
+<rngdates>
+<begdate>1970</begdate>
+<enddate>1985</enddate>
+</rngdates>
+</timeinfo>
+<current>publication date</current>
+</timeperd>
+<status>
+<progress>Complete</progress>
+<update>None planned</update>
+</status>
+<spdom>
+<bounding>
+<westbc>-160.5000</westbc>
+<eastbc>-66.0000</eastbc>
+<northbc>50.0000</northbc>
+<southbc>18.750</southbc>
+</bounding>
+</spdom>
+<keywords>
+<theme>
+<themekt>None</themekt>
+<themekey>land</themekey>
+<themekey>landuse</themekey>
+<themekey>landcover</themekey>
+<themekey>GIRAS</themekey>
+<themekey>LULC</themekey>
+<themekey>digital</themekey>
+<themekey>geographic</themekey>
+<themekey>inlandWaters</themekey>
+</theme>
+<place>
+<placekt>None</placekt>
+<placekey>United States</placekey>
+<placekey>USA</placekey>
+</place>
+</keywords>
+<accconst>none</accconst>
+<useconst>Not for use at scales greater than 1:250,000. Please note the data set depicts historical land use and is not suitable for applications requiring current land use information.</useconst>
+<ptcontac>
+<cntinfo>
+<cntorgp>
+<cntorg>U.S. Geological Survey</cntorg>
+</cntorgp>
+<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>507 National Center</address>
+<city>Reston</city>
+<state>VA</state>
+<postal>20192</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+<cntemail>http://answers.usgs.gov/cgi-bin/gsanswers?pemail=h2oteam&amp;subject=GIS+Data+Set+ds240_landuse_poly</cntemail>
+</cntinfo>
+</ptcontac>
+<browse>
+<browsen>http://water.usgs.gov/GIS/browse/ds240_landuse_poly.png</browsen>
+<browsed>Illustration of the data set.</browsed>
+<browset>PNG</browset>
+</browse>
+<secinfo>
+<secsys>None</secsys>
+<secclass>Unclassified</secclass>
+<sechandl>None</sechandl>
+</secinfo>
+<native>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.0.0.535</native>
+<crossref>
+<citeinfo>
+<origin>James R. Anderson</origin>
+<origin>Ernest E. Hardy</origin>
+<origin>John T. Roach</origin>
+<origin>Richard E. Witmer</origin>
+<pubdate>1976</pubdate>
+<title>
+A Land Use and Land Cover Classification System for Use with
+Remote Sensor Data, USGS Professional Paper 964
+</title>
+<pubinfo>
+<pubplace>Reston, Virginia</pubplace>
+<publish>U.S. Geological Survey</publish>
+</pubinfo>
+<onlink>http://pubs.er.usgs.gov/pubs/pp/pp964</onlink>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>U.S. Geological Survey</origin>
+<pubdate>1990</pubdate>
+<title>
+USGeoData 1:250,000 and 1:100,000 Scale Land Use and
+Land Cover and Associated Maps Digital Data
+</title>
+<pubinfo>
+<pubplace>Reston, Virginia</pubplace>
+<publish>U.S. Geological Survey</publish>
+</pubinfo>
+<onlink>http://edc.usgs.gov/products/landcover/lulc.html</onlink>
+<onlink>http://landcover.usgs.gov</onlink>
+<onlink>http://www.vterrain.org/Culture/LULC/Data_Users_Guide_4.html</onlink>
+</citeinfo>
+</crossref>
+<crossref>
+<citeinfo>
+<origin>U.S. Environmental Protection Agency</origin>
+<pubdate>1994</pubdate>
+<title>epagiras</title>
+<geoform>vector digital data</geoform>
+<pubinfo>
+<pubplace>Washington, DC, USA</pubplace>
+<publish>U.S. Environmental Protection Agency</publish>
+</pubinfo>
+<onlink>http://www.epa.gov/ngispgm3/spdata/EPAGIRAS/</onlink>
+</citeinfo>
+</crossref>
+</idinfo>
+<dataqual>
+<logic>Polygon consistency checked in ArcInfo. (No overlaps or seams present.)</logic>
+<complete>Visually checked against land use and land cover data sets.</complete>
+<lineage>
+<srcinfo>
+<srccite>
+<citeinfo>
+<origin>U.S. Geological Survey</origin>
+<pubdate>1990</pubdate>
+<title>
+USGeoData 1:250,000 and 1:100,000 Scale Land Use and
+Land Cover and Associated Maps Digital Data
+</title>
+<pubinfo>
+<pubplace>Reston, Virginia</pubplace>
+<publish>U.S. Geological Survey</publish>
+</pubinfo>
+<onlink>http://landcover.usgs.gov</onlink>
+</citeinfo>
+</srccite>
+<srcscale>250000</srcscale>
+<typesrc>digital data</typesrc>
+<srctime>
+<timeinfo>
+<rngdates>
+<begdate>1970</begdate>
+<enddate>1985</enddate>
+</rngdates>
+</timeinfo>
+<srccurr>ground condition (air photographs collected c. 1970-1985)</srccurr>
+</srctime>
+<srccitea>giras</srccitea>
+<srccontr>polygon geography and attributes</srccontr>
+</srcinfo>
+<procstep>
+<procdesc>
+The data was reformatted from the USGS published
+information to ArcInfo coverage format, edited and
+polygon topology built, followed by conversion to
+ArcInfo EXPORT format.
+
+See Supplemental_Information element of this metadata record more details.
+</procdesc>
+<procdate>20030101</procdate>
+<proccont>
+<cntinfo>
+<cntperp>
+<cntper>Edward Partington</cntper>
+<cntorg>U.S. Environmental Protection Agency</cntorg>
+</cntperp>
+<cntpos>Computer Specialist</cntpos>
+<cntaddr>
+<addrtype>mailing and physical address</addrtype>
+<address>401 M St SW</address>
+<city>Washington</city>
+<state>DC</state>
+<postal>20460</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>(202) 260-3106</cntvoice>
+<cntfax>(202) 401-8390</cntfax>
+<cntemail>partington.ed@epamail.epa.gov</cntemail>
+<cntinst>email or phone</cntinst>
+</cntinfo>
+</proccont>
+</procstep>
+<procstep>
+<procdesc>
+The ArcInfo EXPORT format data sets were retrieved from the EPA server, and edited by USGS to to correct minor attribute and geography errors, followed by coordinate projection and data format translation.  The final data set is seamless and very closely match together at quad boundaries (although exact edgematching processing was not done, only tiny gaps exist between quadrangle tiles). 
+
+The quadrangles from Alaska and Hawaii were not available from EPA&apos;s collection of EXPORT files. They were downloaded from the USGS EROS ftp site at ftp://edcftp.cr.usgs.gov/pub/data/LULC. The GIRAS format files were converted to ArcInfo Coverage format. The Hawaii files were into a single data ArcInfo coverage, which was was given the tile label G18154. 
+
+This work was completed by Curtis Price, Naomi Nakagaki, Kerie Hitt, and Rick Clawges in support of the USGS National Water-Quality Assessment Program.   A description of this process has been published in
+
+Price, C., Naomi, N., Hitt, K., and Clawges, R., 2003, Mining GIRAS: Improving on a national treasure of land use data, in Proceedings of the 2004 ESRI International User Conference, Environmental Systems Research Institute, Redlands Calif. [on-line] (Accessed November 3, 2004, from http://gis.esri.com/library/userconf/proc03/p0904.pdf)
+
+See the Supplemental Information element of this metadata record for more details.
+</procdesc>
+<procdate>20030101</procdate>
+<proccont>
+<cntinfo>
+<cntorgp>
+<cntorg>U.S. Geological Survey</cntorg>
+</cntorgp>
+<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>507 National Center</address>
+<city>Reston</city>
+<state>VA</state>
+<postal>20192</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+<cntemail>http://answers.usgs.gov/cgi-bin/gsanswers?pemail=h2oteam&amp;subject=GIS+Data+Set+ds240_landuse_poly</cntemail>
+</cntinfo>
+</proccont>
+</procstep>
+</lineage>
+</dataqual>
+<spref>
+<horizsys>
+<geograph>
+<latres>0.000001</latres>
+<longres>0.000001</longres>
+<geogunit>Decimal degrees</geogunit>
+</geograph>
+<geodetic>
+<horizdn>North American Datum of 1983</horizdn>
+<ellips>Geodetic Reference System 80</ellips>
+<semiaxis>6378137.000000</semiaxis>
+<denflat>298.257222</denflat>
+</geodetic>
+</horizsys>
+</spref>
+<eainfo>
+<detailed>
+<enttyp>
+<enttypl>
+&quot;name&quot;.dbf where &quot;name&quot; a geographic identifier of the form
+&quot;GAABBB&quot;, where &quot;AA&quot; is that latitude and &quot;BB&quot; is the longitude
+of the lower right corner of the tile covered by the data set.
+</enttypl>
+<enttypd>ESRI shapefile feature attribute table</enttypd>
+<enttypds>GIRAS digital data</enttypds>
+</enttyp>
+<attr>
+<attrlabl>LUCODE</attrlabl>
+<attrdef>Land use classification code number</attrdef>
+<attrdefs>GIRAS</attrdefs>
+<attrdomv>
+<codesetd>
+<codesetn>Anderson Level 2 land use classification codes (integers 11-&gt;92)</codesetn>
+<codesets>
+Anderson, J.R., Hardy, E.E., Roach J.T., and Witmer R.E., 1976.
+A Land Use and Land Cover Classification System for Use with
+Remote Sensor Data. USGS Professional Paper 964,
+U.S. Geological Survey, Reston, VA.
+
+Also see: http://landcover.usgs.gov
+</codesets>
+</codesetd>
+</attrdomv>
+</attr>
+<attr>
+<attrlabl>LANDUSE</attrlabl>
+<attrdef>Land use and land cover class description</attrdef>
+<attrdefs>GIRAS</attrdefs>
+<attrdomv>
+<codesetd>
+<codesetn>Anderson Level 2 land use classification descriptions (text)</codesetn>
+<codesets>
+Anderson, J.R., Hardy, E.E., Roach J.T., and Witmer R.E., 1976.
+A Land Use and Land Cover Classification System for Use with
+Remote Sensor Data. USGS Professional Paper 964,
+U.S. Geological Survey, Reston, VA.
+
+Also see: http://landcover.usgs.gov
+</codesets>
+</codesetd>
+</attrdomv>
+</attr>
+</detailed>
+</eainfo>
+<distinfo>
+<distrib>
+<cntinfo>
+<cntorgp>
+<cntorg>U.S. Geological Survey</cntorg>
+</cntorgp>
+<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>507 National Center</address>
+<city>Reston</city>
+<state>VA</state>
+<postal>20192</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+<cntemail>http://answers.usgs.gov/cgi-bin/gsanswers?pemail=h2oteam&amp;subject=GIS+Data+Set+ds240_landuse_poly</cntemail>
+</cntinfo>
+</distrib>
+<resdesc>Downloadable Data</resdesc>
+<distliab>
+
+Although this data set has been used by the U.S. Geological Survey, U.S. Department of the Interior, no warranty expressed or implied is made by the U.S. Geological Survey as to the accuracy of the data and related materials. The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the U.S. Geological Survey in the use of this data, software, or related materials. 
+
+Any use of trade, product, or firm names is for descriptive purposes only and does not imply endorsement by the U.S. Government. 
+
+Although this Federal Geographic Data Committee-compliant metadata file is intended to document the data set in nonproprietary form, this metadata file may include some vendor-specific terminology.
+
+</distliab>
+<stdorder>
+
+  <digform> 
+   <digtinfo> 
+    <formname>Download index</formname>
+    <formcont>Web page to extract files from an image map.</formcont> 
+    <filedec>HTML</filedec> 
+    <transize>5 KB</transize> 
+   </digtinfo> 
+   <digtopt> 
+    <onlinopt> 
+     <computer> 
+      <networka> 
+       <networkr>http://water.usgs.gov/GIS/dsdl/ds240/index.html</networkr> 
+      </networka> 
+     </computer> 
+    </onlinopt> 
+   </digtopt> 
+  </digform>
+
+<fees>None.  This data set is provided by USGS as a public service.</fees>
+</stdorder>
+</distinfo>
+<metainfo>
+<metd>20070401</metd>
+<metc>
+<cntinfo>
+<cntorgp>
+<cntorg>U.S. Geological Survey</cntorg>
+</cntorgp>
+<cntpos>Ask USGS -- Water Webserver Team</cntpos>
+<cntaddr>
+<addrtype>mailing address</addrtype>
+<address>507 National Center</address>
+<city>Reston</city>
+<state>VA</state>
+<postal>20192</postal>
+<country>USA</country>
+</cntaddr>
+<cntvoice>1-888-275-8747 (1-888-ASK-USGS)</cntvoice>
+<cntemail>http://water.usgs.gov/user_feedback_form.html</cntemail> 
+</cntinfo>
+</metc>
+<metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn> 
+<metstdv>FGDC-STD-001-1998</metstdv> 
+</metainfo> 
+
+</metadata>
