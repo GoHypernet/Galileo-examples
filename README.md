@@ -1,4 +1,4 @@
-# Galileo application example repository
+# Galileo application example repository for Windows applications
 
 This repository contains a number of examples, representing many frameworks,
 that can be deployed through Galileo with no additional setup. 
