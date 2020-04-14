@@ -50,7 +50,8 @@ model.samples <- coda.samples(model.fit, c("beta0", "beta1", "beta2",
 summary(window(model.samples, start = burnin))
 
 #2d. Plots of the posterior distributions of the parameters.
+jpeg('figure_1.jpeg')
 plot(model.samples, trace=FALSE,  density = TRUE)
-     
+dev.off()
      
      

@@ -2,7 +2,7 @@
 
 FROM rocker/r-apt:bionic
 
-#The next block determines what dependencies to load
+#Install RStan from binary
 RUN R -e 'options(Ncpus = 6)'
 RUN add-apt-repository -y "ppa:marutter/rrutter3.5"
 RUN add-apt-repository -y "ppa:marutter/c2d4u3.5"

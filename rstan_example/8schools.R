@@ -2,7 +2,6 @@
 #From https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started
 
 library("rstan") # observe startup messages
-options(mc.cores = parallel::detectCores())
 rstan_options(auto_write = TRUE)
 
 schools_dat <- list(J = 8, 
@@ -12,8 +11,14 @@ schools_dat <- list(J = 8,
 fit <- stan(file = '8schools.stan', data = schools_dat)
 
 print(fit)
+
+jpeg('figure_1.jpeg')
 plot(fit)
+dev.off()
+
+jpeg('figure_1.jpeg')
 pairs(fit, pars = c("mu", "tau", "lp__"))
+dev.off()
 
 la <- extract(fit, permuted = TRUE) # return a list of arrays 
 mu <- la$mu 
