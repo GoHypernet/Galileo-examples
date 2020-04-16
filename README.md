@@ -1,16 +1,11 @@
-# Galileo application example repository
+# Galileo application example repository for GPUs 
 
-This repository contains a number of examples, representing many frameworks,
-that can be deployed through Galileo with no additional setup. 
+This repository contains examples of how to run jobs on GPU machines in Galileo.  
 
-Each subdirectory contains its own readme file describing the analysis being 
-performed. A user can copy the Dockerfile from an example similar to the one 
-they would like to run and modify it accordingly. Alternatively, a user can 
-use the Docker Wizard helper in the Galileo application to build a Dockerfile 
-from scratch for their framework. 
+The first example, check_gpu_example, performs no computations but instead returns the 
+hardware information of the machine it was deployed to in the output.txt file. The hardware 
+information is aquired by running the nvidia-smi command in the Dockerfile entrypoint. 
 
-For more information on Galileo, start here:
-https://galileoapp.io/gettingstarted/
-
-To start using the application, go here:
-https://app.galileoapp.io
+The seconnd example, small_tf_gpu_example, performs a short running gradient descent optimization 
+problem using the official tensorflow base image for gpu platforms. See the Dockerfile in this folder
+for the entrypoint of the calculation. 
