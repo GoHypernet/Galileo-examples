@@ -1,0 +1,38 @@
+!*********************************************************************************************************
+! The .tgc file controls the 2D grid dimensions, cell codes, elevations and material categories
+!*********************************************************************************************************
+!_________________________________________________________________________________________________________
+! 2D DOMAIN EXTENT AND RESOLUTION COMMANDS
+Read GIS Location == gis\2d_loc_EG00_001_L.shp	! GIS layer defining the origin and location of the 2D domain
+Cell Size == <<2D_CELL_SIZE>>					! Set the model cell size based on the value of the variable '2D_CELL_SIZE'
+Grid Size (X,Y) == 850, 1000  					! Define the X and Y dimensions of the 2D domain 
+
+!__________________________________________________________________________________________________________
+! MODEL GRID COMMANDS
+Set Code == 0  									! Set all cells to inactive 
+Read GIS Code == gis\2d_code_EG00_001_R.shp  	! Set cell codes according to attributes specified within the GIS layer
+
+!__________________________________________________________________________________________________________
+! DEFINE BASE TOPOGRAPHY
+Set Zpts == 100  								! Sets every 2D elevation zpt to 100m above datum
+Read GRID Zpts == grid\DEM_SI_Unit_01.asc 		! Assigns the elevation of zpts from the ASCII grid
+
+!__________________________________________________________________________________________________________
+! DEFINE TOPOGRAPHIC AMENDMENTS
+IF Scenario == D01   																									! Start block of commands for the 'D01' scenario
+	Read GIS Z Shape == gis\2d_zsh_EG03_development_005_R.shp | gis\2d_zsh_EG03_development_005_P.shp 					! GIS layer to assign elevations within the digitised polygon
+
+ELSE IF Scenario == D02 																								! Start block of commands for the 'D02' scenario
+	Create TIN Zpts WRITE TIN  == gis\2d_ztin_EG03_development_006_R.shp | gis\2d_ztin_EG03_development_006_P.shp 		! GIS layer that creates and writes a TIN to the same location as the GIS layer
+
+ELSE IF Scenario == EXG 																								! Start block of commands for the 'EXG' scenario
+																														! 'EXG' scenario place holder - No Development Updates
+ELSE 																													! Start block of commands for all other scenarios scenario
+	Pause == Error - invalid scenario specified																			! Output error message when an invalid scenario has been specified
+
+END IF 																													! End block of commands
+
+!__________________________________________________________________________________________________________
+! DEFINE  LANDUSE
+Set Mat == 1   									! Sets the Material ID as defined within the Materials Definition file to all cells within the model domain  
+Read GIS Mat == gis\2d_mat_EG00_001_R.shp  		! Assigns the Material ID to cells as defined within the GIS layer

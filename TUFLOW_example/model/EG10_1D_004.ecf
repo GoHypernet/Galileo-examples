@@ -1,0 +1,26 @@
+!*****************************************************************************************************************
+! The .ecf file defines the 1D simulation parameters and directs input from other data sources for all 1D domains
+!*****************************************************************************************************************
+!_________________________________________________________________________________________________________________
+! SIMULATION TIME CONTROL COMMANDS
+Timestep == 0.5  										! Specifies a 1D computational timestep of 0.75 seconds
+
+!_________________________________________________________________________________________________________________
+! 1D NETWORK AND TABLE LINKS
+Read GIS Network == gis\1d_nwk_EG07_culverts_002_L.shp 		! Reads the 1d_nwk GIS layer defining culverts within the model 
+Read GIS Network == gis\1d_nwk_EG07_channels_002_L.shp 		! Reads the 1d_nwk GIS layer defining channels within the model 
+Read GIS Table Links == xs\1d_xs_EG07_creek_002_L.shp  		! GIS layer that references cross-sectional data stored in separate csv files
+
+!_________________________________________________________________________________________________________________
+! 1D BOUNDARY CONDITIONS
+Read GIS BC == gis\1d_bc_EG07_002_P.shp 					! GIS layer defining 1D boundary conditions
+
+!_________________________________________________________________________________________________________________
+! OUTPUT CONTROL AND FORMAT COMMANDS
+Output Folder == ..\results\EG10\1d						! Specifies the location of the 1D output files
+Write Check Files == ..\check\EG10\1d\					! Specifies the location of the 1D check files and prefixes them with the .tcf filename
+Output Interval (s) == 180								! Writes the 1D output every 3 minutes. Note the (s) is required to indicate the value is in seconds
+
+Read GIS WLL == gis\1d_wll_EG07_002_L.shp               ! GIS layers used to display the 1D results in 2D map output result files
+Read GIS WLL Points == gis\1d_wllp_EG07_002_P.shp       ! GIS layer defining the elevation/bed resistance of the 1D channel, to provide a better representation of velocity and flood hazard in mapped output
+

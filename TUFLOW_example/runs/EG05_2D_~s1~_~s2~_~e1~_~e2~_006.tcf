@@ -1,0 +1,55 @@
+!*********************************************************************************************************
+! This example model is documented at http://wiki.tuflow.com/
+! Any comments or feedback, please email support@tuflow.com
+!*********************************************************************************************************
+! The .tcf file defines the model simulation parameters and directs input from other data sources.
+!*********************************************************************************************************
+!_________________________________________________________________________________________________________
+! MODEL INITIALISATION COMMANDS  
+Tutorial Model == ON											! This command allows for this model to be simulated without a TUFLOW license
+GIS Format == SHP												! Specify SHP as the output format for all GIS files
+SHP Projection == ..\model\gis\Projection.prj 					! Sets the GIS projection for the TUFLOW Model
+! Write Empty GIS Files == ..\model\gis\empty | SHP				! This command is commented out for this run as it is no longer needed 
+Model Events == Q100 | 2hr !Options = Q100 QPMF | 2hr 4hr 		! Specifies the model scenarios to simulate
+Model Scenarios == 5m | Exg  !Options = 2.5m 5m | EXG D01 D02	! Specifies the model scenarios to simulate
+
+!_________________________________________________________________________________________________________
+! MODEL VARIABLES
+IF Scenario == 5m							! Start block of commands for the '5m' scenario
+	Set Variable 2D_Timestep == 1.0			! Set the variable '2D_Timestep' to 1s 
+	Set Variable 2D_CELL_SIZE == 5.0		! Set the variable '2D_CELL_SIZE' to 5
+ELSE IF Scenario == 2.5m 					! Start block of commands for the '2.5m' scenario
+	Set Variable 2D_Timestep == 0.5			! Set the variable '2D_Timestep' to 0.5s 
+	Set Variable 2D_CELL_SIZE == 2.5		! Set the variable '2D_Timestep' to 2.5 
+END IF										! End block of commands
+
+!_________________________________________________________________________________________________________
+! MODEL INPUTS
+Geometry Control File == ..\model\EG05_5m_003.tgc	! Reference the TUFLOW Geometry Control File
+BC Control File == ..\model\EG00_5m_001.tbc			! Reference the TUFLOW Boundary Conditions Control File
+BC Database == ..\bc_dbase\bc_dbase_EG05_005.csv	! Reference the Boundary Conditions Database
+Read Materials File == ..\model\materials.csv  		! Reference the Materials Definition File
+
+!__________________________________________________________________________________________________________
+! INITIAL WATER LEVELS
+Set IWL == 36.5				! Define an initial 2D water level of 36.5m above datum
+
+!__________________________________________________________________________________________________________
+! SIMULATION TIME CONTROL COMMANDS
+Timestep == <<2D_Timestep>>	! Specifies a 2D computational timestep of <<2D_Timestep>> seconds
+Start Time == 0  			! Specifies a simulation start time of 0 hours
+End Time == 3  				! Specifies a simulation end time of 3 hours
+
+
+!__________________________________________________________________________________________________________
+! OUTPUT CONTROL AND FORMAT COMMANDS
+Log Folder == log\EG05  														! Redirects log output files to the following folder
+Output Folder == ..\results\EG05\006\<<~s1~>>\<<~s2~>>\<<~e1~>>\<<~e2~>> 		! Specifies the location of the 2D result files
+Write Check Files == ..\check\EG05\006\<<~s1~>>\<<~s2~>>\<<~e1~>>\<<~e2~>>\		! Specifies the location of the 2D check files and prefixes them with the .tcf filename
+Map Output Format == XMDF														! Specifies the format for the map output result files
+Map Output Data Types == h V q d												! Specify the output data types
+Start Map Output == 0 															! Writes the map output from time 0 hours
+Map Output Interval == 300  													! Outputs the map output result files every 300s 
+Maximums and Minimums == ON MAXIMUMS ONLY  										! Track the maximums throughout the simulation and write to map output 
+
+Event File == EG05_event_definition_005.tef			! Reference the TUFLOW Event File

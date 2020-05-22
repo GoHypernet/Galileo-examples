@@ -1,0 +1,52 @@
+Stage                                             ,Total (s)   ,Elapsed (s) 
+Initilisation (file opened)                       ,      0.00,      0.00
+Found 2D domains                                  ,      0.26,      0.26
+Start 2D BC Array Sizes Domain_001                ,      0.30,      0.04
+End 2D BC Array Sizes Domain_001                  ,      0.30,      0.01
+Start Estry Setup s0                              ,      0.30,      0.00
+End Estry Setup s0                                ,      0.30,      0.00
+Start Estry Setup s1                              ,      0.31,      0.01
+Estry Setup EC (Weir) Initialise                  ,      0.31,      0.00
+End Estry Setup s1                                ,      0.32,      0.00
+Start TUFLOW Setup s2                             ,      0.32,      0.00
+End TUFLOW Setup s2                               ,      0.43,      0.11
+Reading Geometry File Domain_001                  ,      0.50,      0.06
+Start Read Read GIS Code                          ,      0.50,      0.01
+End Read Read GIS Code                            ,      0.51,      0.01
+Start Read Grid Read GRID Zpts                    ,      0.51,      0.00
+End Read Grid Read GRID Zpts                      ,      0.52,      0.00
+Start Read Geometry GIS File Read GIS Z Shape     ,      0.54,      0.02
+End Read Geometry GIS File Read GIS Z Shape       ,      1.28,      0.75
+Start Read Read GIS Mat                           ,      1.29,      0.01
+End Read Read GIS Mat                             ,      1.32,      0.03
+Finished Reading Geometry File Domain_001         ,      1.41,      0.08
+Start Read input file (stage 2) Domain_001        ,      1.41,      0.00
+End Read input file (stage 2) Domain_001          ,      1.42,      0.02
+Identifying cells within user defined output zones,      1.42,      0.00
+Finished Identifying cells within user defined out,      1.42,      0.00
+Setting instability water levels Domain_001       ,      1.42,      0.00
+Finished Setting instability water levels Domain_0,      1.43,      0.00
+Assigning any Variable Z Shape 1D Trigger Nodes   ,      1.43,      0.00
+Finished Assigning any Variable Z Shape 1D Trigger,      1.43,      0.00
+Start Reading Input File (Stage 3)                ,      1.43,      0.00
+End Reading Input File (Stage 3)                  ,      1.46,      0.03
+Reading Boundary File Domain_001                  ,      1.46,      0.00
+Finished Reading Boundary File Domain_001         ,      1.54,      0.08
+Initialising 2D Data (Stage 1) Domain_001         ,      1.54,      0.01
+Finished Initialising 2D Data (Stage 1) Domain_001,      1.56,      0.02
+Initialising 2D Data (Stage 2) Domain_001         ,      1.56,      0.00
+Finished Initialising 2D Data (Stage 2) Domain_001,      1.57,      0.01
+Initialising any 2D2D link data Domain_001        ,      1.58,      0.01
+Finished Initialising any 2D2D link data Domain_00,      1.59,      0.00
+Start Writing _grd_check                          ,      1.66,      0.07
+End Writing _grd_check                            ,      3.94,      2.28
+Start Writing _zpt_check                          ,      3.94,      0.00
+End Writing _zpt_check                            ,      9.44,      5.50
+Start Writing _uvpt_check                         ,      9.44,      0.00
+End Writing _uvpt_check                           ,     13.27,      3.83
+Start Writing check DEMs                          ,     13.47,      0.20
+Start Calculating grid interpolation factors      ,     13.47,      0.00
+End Calculating grid interpolation factors        ,     13.48,      0.01
+End Writing check DEMs                            ,     13.50,      0.02
+Starting Simulation                               ,     13.52,      0.02
+Summary File Close                                ,     13.52,      0.00

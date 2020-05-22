@@ -1,0 +1,22 @@
+!*****************************************************************************************************************
+! The .ecf file defines the 1D simulation parameters and directs input from other data sources for all 1D domains
+!*****************************************************************************************************************
+!_________________________________________________________________________________________________________________
+! SIMULATION TIME CONTROL COMMANDS
+Timestep == 0.5  										! Specifies a 1D computational timestep of 0.75 seconds
+
+!_________________________________________________________________________________________________________________
+! 1D NETWORK AND TABLE LINKS
+Read GIS Network == gis\1d_nwk_E06_Bridge_004_L.shp     ! Reads the 1d_nwk GIS layer defining bridges within the model 
+Read GIS Table Links == xs\1d_xs_EG06_bridge_004_L.shp  ! GIS layer that references cross-sectional data stored in separate csv files
+Read GIS Table Links == bg\1d_bg_EG06_bridge_004_L.shp  ! GIS layer that references bridge loss values stored in separate csv files
+
+!_________________________________________________________________________________________________________________
+! OUTPUT CONTROL AND FORMAT COMMANDS
+Output Folder == ..\results\EG06\1d						! Specifies the location of the 1D output files
+Write Check Files == ..\check\EG06\1d\					! Specifies the location of the 1D check files and prefixes them with the .tcf filename
+Output Interval (s) == 180								! Writes the 1D output every 3 minutes. Note the (s) is required to indicate the value is in seconds
+
+Read GIS WLL == gis\1d_wll_EG06_004_L.shp				! GIS layers used to display the 1D results in 2D map output result files
+
+

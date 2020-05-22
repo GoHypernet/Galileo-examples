@@ -1,0 +1,7 @@
+Name,Source,Column 1,Column 2,Add Col 1,Mult Col 2,Add Col 2,Column 3,Column 4
+FC01,USBC_EG02_004.csv,inflow_time_hr,inflow_FC01,,,,,
+SA13,USBC_EG02_004.csv,inflow_time_hr,inflow_SA13,,,,,
+SA14,USBC_EG02_004.csv,inflow_time_hr,inflow_SA14,,,,,
+SA17,USBC_EG02_004.csv,inflow_time_hr,inflow_SA17,,,,,
+SA23,USBC_EG02_004.csv,inflow_time_hr,inflow_SA23,,,,,
+SA25,USBC_EG02_004.csv,inflow_time_hr,inflow_SA25,,,,,
