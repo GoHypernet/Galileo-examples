@@ -1,9 +1,19 @@
-From julia
-RUN julia -e 'import Pkg; Pkg.add("LightGraphs")' && \
-    julia -e 'import Pkg; Pkg.add("DataFrames")' && \
-    julia -e 'import Pkg; Pkg.add("CSV")' && \
-    julia -e 'import Pkg; Pkg.add("SpecialFunctions")' && \
-    julia -e 'using LightGraphs' && \
-    julia -e 'using DataFrames'
+#The line below determines the build image to use
+
+FROM julia:1.1
+
+#The next block determines what dependencies to load
+
+RUN julia -e 'import Pkg; Pkg.add("CSV")'
+RUN julia -e 'import Pkg; Pkg.add("DataFrames")'
+RUN julia -e 'import Pkg; Pkg.add("GLM")'
+RUN julia -e 'import Pkg; Pkg.add("RDatasets")'
+RUN julia -e 'import Pkg; Pkg.add("StatsBase")'
+
+#This line determines where to copy project files from, and where to copy them to
+
 COPY . .
-ENTRYPOINT ["julia","project1.jl","medium.csv","bayesnetwork.gph"]
+
+#The entrypoint is the command used to start your project
+
+ENTRYPOINT ["julia","julia_example.jl"]
