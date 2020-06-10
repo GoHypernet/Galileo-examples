@@ -1,6 +1,0 @@
- $DATAC
-  irest = 0
-  dtnew = 2.0
-  total_simulation_time = 10.0
-  time_interval         = 2.0
- $ENDC

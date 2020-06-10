@@ -1,7 +1,0 @@
-Material ID,Manning's n,Infiltration Parameters,Land Use Hazard ID,SRF,Impervious,! Description
-1,0.06,,,,0,!Pasture
-2,0.022,,,,1,!Roads
-3,3,,,,1,!Buildings
-4,0.03,,,,0,!Ponds and other water
-10,0.08,,,,0,!Vegetated creek
-11,0.04,,,,0,!Maintained Grass

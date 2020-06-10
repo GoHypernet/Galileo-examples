@@ -1,7 +1,0 @@
-Name,Source,Column 1,Column 2,Add Col 1,Mult Col 2,Add Col 2,Column 3,Column 4
-FC01,USBC_EG00_001.csv,inflow_time_hr,inflow_FC01,,,,,
-SA13,USBC_EG02_005.csv,inflow_time_hr,inflow_RF,,,,,
-SA14,USBC_EG02_005.csv,inflow_time_hr,inflow_RF,,,,,
-SA17,USBC_EG02_005.csv,inflow_time_hr,inflow_RF,,,,,
-SA23,USBC_EG02_005.csv,inflow_time_hr,inflow_RF,,,,,
-SA25,USBC_EG02_005.csv,inflow_time_hr,inflow_RF,,,,,

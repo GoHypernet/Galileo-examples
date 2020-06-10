@@ -1,9 +1,0 @@
- $DATAC
-  irest = 0
-  dtnew = 1.0
-  total_simulation_time = 2.1
-  time_interval         = 10.0
-  user(9) = 1
- $ENDC
-
-NOTE: user9=1 forces flow modeling only
