@@ -2,7 +2,7 @@
 This is example comes from the Tuflow example that can be found here: https://wiki.tuflow.com/
 
 The file called 'Dockerfile' is the configuration file required for Galileo to run Tuflow. It must be located
-in the parent directory of you model. It takes 2 parameters: the name subdirectory where your .bat processing file is located (via the environment variable RUNS_DIR)
+in the parent directory of your model. It takes 2 parameters: the name of the subdirectory where your .bat processing file is located (via the environment variable RUNS_DIR)
 and the name of the .bat processing file (via the environment variable TUFLOW_BAT). 
 
 The paths to the single and double precision executables are preset and available through the environment variables: EXE_iSP and EXE_iDSP. If you have the variables set in your .bat file, be sure to comment them out.  
