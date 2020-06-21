@@ -7,4 +7,4 @@ boxsize     62.23 62.23 62.23
 slowperiod   2
 thermostat  on
 
-run         7000000
+run         10000
