@@ -1,0 +1,10 @@
+parameters  dhfr.prm
+structure   dhfr.psf
+
+coordinates dhfr.pdb
+boxsize     62.23 62.23 62.23
+
+slowperiod   2
+thermostat  on
+
+run         7000000
