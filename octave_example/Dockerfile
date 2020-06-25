@@ -1,3 +1,6 @@
-From hypernetlabs/octave
+FROM mtmiller/octave
+RUN octave --no-gui --eval "pkg install -forge io"
+RUN octave --no-gui --eval "pkg install -forge statistics"
+RUN octave --no-gui --eval "pkg install -forge dataframe"
 COPY . .
-ENTRYPOINT ["octave","2D_supersonic_wedge.m"]
+ENTRYPOINT ["octave","octave_example.m"]
