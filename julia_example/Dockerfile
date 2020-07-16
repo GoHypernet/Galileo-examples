@@ -1,5 +1,5 @@
 #The line below determines the build image to use
-FROM julia:1.1
+FROM julia:1.4
 
 # run as the user "galileo" with associated working directory
 RUN useradd -ms /bin/bash galileo
