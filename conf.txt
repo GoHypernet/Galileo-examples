@@ -8,5 +8,3 @@ center_z = 57.5
 size_x = 22
 size_y = 24
 size_z = 28
-
-cpu = 16
