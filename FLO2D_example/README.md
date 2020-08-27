@@ -1,5 +1,5 @@
 # FLO2D example
-This is example comes from the FLO2D Diamond example that comes pre-installed with FLO2D software. 
+This is example originates from the FLO2D Diamond example that comes pre-installed with FLO2D software. 
 
 To run FLO2D jobs with Galileo, you must supply a valid systemflP.dll file by placing
 it in the top of your FLO2d project folder. Your systemflP.dll can typically be found in the 
