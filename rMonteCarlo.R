@@ -8,11 +8,11 @@ mtcars <- read.csv("mtcars.csv")
 model1 <- lm(mpg ~ wt, data = mtcars)
 summary(model1)
 
-jpeg('regression_fit.jpeg')
+dev.copy(jpeg, "regression_fit.jpeg")
 plot(mtcars$wt, mtcars$mpg, main="Results", xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
 abline(lm(mtcars$mpg~mtcars$wt), col="red") # regression line (y~x)
 lines(lowess(mtcars$wt,mtcars$mpg), col="blue") # lowess line (x,y)
-jpeg('regression_fit.jpeg')
+dev.off()
 
 noquote("MONTE CARLO EXAMPLE")
 
@@ -39,9 +39,9 @@ parallelThrows <- function(numberDice, numberSides, targetValue, trialIndices){
   sapply(1:length(trialIndices), function(x) sum(sample(1:numberSides, numberDice, replace=TRUE)) >= targetValue)
 }
 
-noquote("Let's try 10 million throws, record the system time, & calculate the mean of the outcomes")
+noquote("Let's try 1 million throws, record the system time, & calculate the mean of the outcomes")
 set.seed(1)
-system.time(outcomes2 <- pvec(mc.cores = (detectCores()-2), 1:10000000, function(x) parallelThrows(2, 6, 7, x)))
+system.time(outcomes2 <- pvec(mc.cores = (detectCores()-2), 1:1000000, function(x) parallelThrows(2, 6, 7, x)))
 mean(outcomes2)
 
 noquote("As you can see, the result is much more accurate, and the run didn't take very long")
