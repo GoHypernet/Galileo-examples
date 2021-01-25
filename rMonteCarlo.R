@@ -8,7 +8,7 @@ mtcars <- read.csv("mtcars.csv")
 model1 <- lm(mpg ~ wt, data = mtcars)
 summary(model1)
 
-dev.copy(jpeg, "regression_fit.jpeg")
+jpeg('regression_fit.jpg')
 plot(mtcars$wt, mtcars$mpg, main="Results", xlab="Car Weight ", ylab="Miles Per Gallon ", pch=19)
 abline(lm(mtcars$mpg~mtcars$wt), col="red") # regression line (y~x)
 lines(lowess(mtcars$wt,mtcars$mpg), col="blue") # lowess line (x,y)
